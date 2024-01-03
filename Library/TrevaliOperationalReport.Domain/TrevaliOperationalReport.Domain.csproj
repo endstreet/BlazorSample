@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E39FFA42-7BCD-4191-B251-BE3F3566F6DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrevaliOperationalReport.Domain</RootNamespace>
+    <AssemblyName>TrevaliOperationalReport.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\..\Dependencies\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="ErrorLogs\ErrorLog.cs" />
+    <Compile Include="General\AccessRightsForRole.cs" />
+    <Compile Include="General\AccessRights.cs" />
+    <Compile Include="General\Distribution.cs" />
+    <Compile Include="General\Equipment.cs" />
+    <Compile Include="General\EquipmentType.cs" />
+    <Compile Include="General\MenuAccessRights.cs" />
+    <Compile Include="General\Menus.cs" />
+    <Compile Include="General\Metrics.cs" />
+    <Compile Include="General\PBIReports.cs" />
+    <Compile Include="General\ProjectType.cs" />
+    <Compile Include="General\Reports.cs" />
+    <Compile Include="General\Role.cs" />
+    <Compile Include="General\RoleMenuAccessRights.cs" />
+    <Compile Include="General\Section.cs" />
+    <Compile Include="General\SectionRole.cs" />
+    <Compile Include="General\Settings.cs" />
+    <Compile Include="General\Shift.cs" />
+    <Compile Include="General\Site.cs" />
+    <Compile Include="General\SiteMetrics.cs" />
+    <Compile Include="General\SiteParameters.cs" />
+    <Compile Include="General\Unit.cs" />
+    <Compile Include="General\UserResetPassword.cs" />
+    <Compile Include="General\UserRole.cs" />
+    <Compile Include="General\Users.cs" />
+    <Compile Include="General\UserSiteRights.cs" />
+    <Compile Include="ProjectEnum.cs" />
+    <Compile Include="Projects\Documents.cs" />
+    <Compile Include="Projects\ExportModel.cs" />
+    <Compile Include="Projects\Project.cs" />
+    <Compile Include="Projects\ProjectResource.cs" />
+    <Compile Include="Projects\ProjectTask.cs" />
+    <Compile Include="Projects\TaskFeedback.cs" />
+    <Compile Include="Projects\TaskResource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\DailyOperationalData.cs" />
+    <Compile Include="Report\DailyShiftOperationalData.cs" />
+    <Compile Include="Report\DailyUploadOperationalData.cs" />
+    <Compile Include="Report\MonthlyBudgetPlanData.cs" />
+    <Compile Include="Report\MonthlyBudgetPlanDataApprove.cs" />
+    <Compile Include="Report\MonthlyForecast.cs" />
+    <Compile Include="Report\MonthlyForecastData.cs" />
+    <Compile Include="Report\MonthlyPlanData.cs" />
+    <Compile Include="Report\Safety.cs" />
+    <Compile Include="Report\WeeklyOperationalData.cs" />
+    <Compile Include="Report\WeeklyOperationalDataApprove.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,27 @@
+﻿@using TrevaliOperationalReport.Class
+@using TrevaliOperationalReport.Pages;
+
+<ul>
+    <li>
+        <a href="#" title="Administration">
+            <span class="icon"><img src="~/content/images/administration.png" alt="Administration"></span>
+            <span>Administration</span>
+        </a>
+        <ul>
+            <li><a href="@Url.Action(Actions.Index, Controllers.Setting, new { area = Areas.Admin })" title="Settings">Settings</a></li>
+            <li><a href="@Url.Action(Actions.Index, Controllers.User, new { area = Areas.Admin })" title="Users">Users</a></li>
+            <li><a href="@Url.Action(Actions.Index, Controllers.Role, new { area = Areas.Admin })" title="Roles">Roles</a></li>
+            <li><a href="@Url.Action(Actions.Index, "Comment", new { area = Areas.Admin })" title="Roles">Roles</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" title="BI">
+            <span class="icon"><img src="~/content/images/bi.png" alt="BI"></span>
+            <span>BI</span>
+        </a>
+        <ul>
+            <li class="active"><a href="#" title="Project Action List">Project Action List</a></li>
+            @*<li>@Html.ActionLink("Local Report Example", "LocalReportExample", "Examples")</li>*@
+        </ul>
+    </li>
+</ul>

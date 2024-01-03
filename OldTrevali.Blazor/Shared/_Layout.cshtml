@@ -1,0 +1,178 @@
+﻿@using TrevaliOperationalReport.Pages;
+@using TrevaliOperationalReport.Class;
+@using TrevaliOperationalReport.App_Start;
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - RPZC Operations</title>
+    <link rel="icon" href="~/Content/images/new_favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    @Styles.Render("~/Content/kendo/kendocss")
+    @Styles.Render("~/styles/toastr")
+    @Styles.Render("~/Content/Bootstrapcss")
+    @Styles.Render("~/Content/Jquerycss")
+    @Styles.Render("~/Content/Customcss")
+
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <link href="~/Content/css/bootstrap-select.min.css" rel="stylesheet">
+    <script src="~/Scripts/bootstrap-select.min.js"></script>
+    @*<script src="~/Scripts/bootstrap-select.js"></script>*@
+    @*<script src="~/Scripts/bootstrap-datepicker.js"></script>*@
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/kendo")
+    @Scripts.Render("~/bundles/toastr")
+    @Scripts.Render("~/bundles/JqueryValidate")
+    @Scripts.Render("~/bundles/Commonjs")
+
+    <script type="text/javascript">
+        var intPageID;
+        pathArray = '@CommonSetting.SiteRootPathUrl' + '/';
+        $(function () {
+            BindMenu("General", "BindMenu");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Start Header -->
+        <header class="header">
+            <div class="top-head">
+                <div class="visible-sm visible-xs logo-div">
+                    <button class="nav-icon">
+                        <span class="one"></span>
+                        <span class="two"></span>
+                        <span class="three"></span>
+                    </button>
+
+                </div>
+                <div>
+                    <a href="@Url.Action("Index", "Home", new { Area = "" })" title="" class="logo">
+                        <img class="img-responsive" src="~/content/images/trevali-report.png" alt="" width="50px">
+                    </a>
+                </div>
+
+                @*<div class="dropdown profile">
+            <a href="#" title="Antonette Coleman" class="user-box right-bar dropdown-toggle" id="dropdownMenu3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="icon"> <img src="images/user-icon.png" alt="Edit Profile"> </span>
+                <span class="user-name"><em>Welcome!</em>Antonette Coleman </span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li><a href="#" title="Settings"><img class="icon" src="images/account.png" alt="Settings">My Account</a></li>
+                <li><a href="#" title="Settings"><img class="icon" src="images/settings.png" alt="Settings">Settings</a></li>
+                <li><a href="#" title="Logout"><img class="icon" src="images/logout.png" alt="Logout">Logout</a></li>
+            </ul>
+        </div>*@
+
+                @*Replaced by johan:
+        <div class="dropdown profile">
+            <a id="dropdownMenu3" title="@SessionController.WelcomeUser" class="user-box right-bar dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown">
+                <span class="icon"> <img src="~/content/images/user-icon.png" alt="Edit Profile"> </span>
+                <span class="user-name"><em>Welcome!</em>@SessionController.WelcomeUser </span>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li><a href="#" id="changepwd" title="Change Password" data-bs-toggle="modal" data-target="#changepwdModal"><img class="icon" src="~/content/images/settings.png" alt="Change Password">Change Password</a></li>
+                <li><a href="@Url.Action(Actions.Logout, Controllers.Account, new { Area = "" })" title="Logout"><img class="icon" src="~/content/images/logout.png" alt="Logout">Logout</a></li>
+            </ul>
+        </div>*@
+                <div class="dropdown profile">
+                    <a id="dropdownMenu3" class="user-box right-bar" title="@SessionController.WelcomeUser" data-bs-toggle="dropdown" aria-expanded="true">
+                        <span class="icon"> <img src="~/content/images/user-icon.png" alt="Edit Profile"> </span>
+                        <span class="user-name"><em>Welcome!</em>@SessionController.WelcomeUser </span>
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+
+                        <li><a href="#" id="changepwd" title="Change Password" data-bs-toggle="modal" data-bs-target="#changepwdModal"><img class="icon" src="~/content/images/settings.png" alt="Change Password">Change Password</a></li>
+                        <li><a href="@Url.Action(Actions.Logout, Controllers.Account, new { Area = "" })" title="Logout"><img class="icon" src="~/content/images/logout.png" alt="Logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-navigation" only-arrow-click="false" mobile-menu="991" animation-speed="300" scroll-bg="#c3c3c3" scroll-color="#a1a1a1" scroll-width="5" id="LeftMenu">
+                @*@{Html.RenderAction("_LeftMenu", "Home", new { Area = "" });}*@
+                @*@Html.Partial("_LeftMenu")*@
+            </nav>
+            @*<div class="trevali-logo" animation-speed="300">
+                <a href="index.html" title="Trevali">
+                    <img class="img-responsive" src="~/content/images/trevali.png" alt="Trevali">
+                </a>
+            </div>*@
+            <!-- End Main Navigation -->
+
+        </header>
+        <div class="menu-overlay"></div>
+
+        <!-- End Header -->
+        <!-- Main Content -->
+        <main class="main-content">
+            @RenderBody()
+
+        </main>
+        <!-- End Main Content -->
+    </div>
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <p class="copyright">&copy; @DateTime.UtcNow.Year - RPZC <span class=""><img src="~/content/images/trevali-report.png" alt="" width="30px"></span></p>
+    </footer>
+    <!-- End Footer -->
+
+    @RenderSection("scripts", required: false)
+
+    <div class="modal fade" id="changepwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content cus-form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><img src="~/content/images/close.png" alt=""></button>
+                    <h2 class="sub-title" id="myModalLabel">Change Password</h2>
+                </div>
+
+                <div class="modal-body">
+                    @*@{Html.RenderAction("_ChangePassword", Controllers.Account, new { area = "" });}*@
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            FormatMenu();
+            $('#changepwd').click(function () {
+                $.ajax({
+                    url: '@Url.Action("_ChangePassword", Controllers.Account, new { area = "" })',
+                    type: 'GET',
+                    datatype: 'json',
+                    success: function (data) {
+                        $('.modal-body').html('');
+                        $('.modal-body').append(data);
+                    },
+                    error: function () { }
+                });
+            });
+        });
+
+        $(document).on("keypress", function (e) {
+            var kcode = e.which || e.keyCode;
+            if (kcode == 13) {
+                return false;
+            }
+        });
+    </script>
+</body>
+
+@Html.Raw(ViewBag.openPopup)
+</html>

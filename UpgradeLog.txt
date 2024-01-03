@@ -1,0 +1,8 @@
+Updating C:\Source\Trevali.Reports\Trevali.Reports\Trevali.Reports.csproj 
+C:\Source\Trevali.Reports\Trevali.Reports\Trevali.Reports.csproj was updated successfully 
+Updating C:\Source\Trevali.Reports\Trevali.Reports\ClientApp\package.json 
+C:\Source\Trevali.Reports\Trevali.Reports\ClientApp\package.json was updated successfully 
+Uninstalling GrapeCity.ActiveReports.Aspnetcore.Viewer from Trevali.Reports
+Package GrapeCity.ActiveReports.Aspnetcore.Viewer version  uninstalled successfully.
+Adding NuGet package references to Trevali.Reports
+Package reference GrapeCity.ActiveReports.Aspnetcore.Viewer version 17.2.2 added successfully.

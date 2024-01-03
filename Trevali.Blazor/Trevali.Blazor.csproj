@@ -1,0 +1,132 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+	<NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Reports\DataSets\dsDaily.xsc" />
+    <None Include="Reports\DataSets\dsDaily.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDaily.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsDaily.xss" />
+    <None Include="Reports\DataSets\dsDailyOperational.xsc" />
+    <None Include="Reports\DataSets\dsDailyOperational.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDailyOperational.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsDailyOperational.xss" />
+    <None Include="Reports\DataSets\dsMonthlyDetail.xsc" />
+    <None Include="Reports\DataSets\dsMonthlyDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMonthlyDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsMonthlyDetail.xss" />
+    <None Include="Reports\DataSets\dsMonthlyRecon.xsc" />
+    <None Include="Reports\DataSets\dsMonthlyRecon.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMonthlyRecon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsMonthlyRecon.xss" />
+    <None Include="Reports\DataSets\dsSafety.xsc" />
+    <None Include="Reports\DataSets\dsSafety.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSafety.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsSafety.xss" />
+    <None Include="Reports\DataSets\dsSiteDetails.xsc" />
+    <None Include="Reports\DataSets\dsSiteDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSiteDetails.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsSiteDetails.xss" />
+    <None Include="Reports\DataSets\dsWeeklyAnalysis.xsc" />
+    <None Include="Reports\DataSets\dsWeeklyAnalysis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWeeklyAnalysis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsWeeklyAnalysis.xss" />
+    <None Include="Reports\DataSets\dsWeeklyReport.xsc" />
+    <None Include="Reports\DataSets\dsWeeklyReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWeeklyReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsWeeklyReport.xss" />
+    <None Include="Reports\RdlReport1.rdlx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\launchSettings.json" />
+    <None Include="Reports\rptDaily.rdlc" />
+    <None Include="Reports\rptDailyOperational.rdlc" />
+    <None Include="Reports\rptExecutiveSummary.rdlc" />
+    <None Include="Reports\rptExecutiveSummary_B.rdlc" />
+    <None Include="Reports\rptExecutiveSummary_F.rdlc" />
+    <None Include="Reports\rptMonthlyDetail.rdlc" />
+    <None Include="Reports\rptMonthlyRecon.rdlc" />
+    <None Include="Reports\rptWeekly.rdlc" />
+    <None Include="Reports\rptWeekly.rdlx" />
+    <None Include="Reports\rptWeeklyAnalysis.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_Imports.razor" />
+    <Content Include="App.razor" />
+    <Content Include="appsettings.json" />
+    <Content Include="appsettings.Development.json" />
+    <Content Include="ar-blazor-viewer-locale.json" />
+    <Content Include="Pages\_Host.cshtml" />
+    <Content Include="Pages\Index.razor" />
+    <Content Include="wwwroot\favicon.ico" />
+    <Content Include="wwwroot\css\site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Reports\DataSets\dsDaily.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsDaily.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsDailyOperational.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsDailyOperational.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsMonthlyDetail.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsMonthlyDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsMonthlyRecon.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsMonthlyRecon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsSafety.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSafety.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsSiteDetails.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSiteDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsWeeklyAnalysis.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsWeeklyAnalysis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsWeeklyReport.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsWeeklyReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="17.2.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Blazor.Viewer" Version="17.2.2" />
+  </ItemGroup>
+</Project>

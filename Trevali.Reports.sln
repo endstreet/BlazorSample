@@ -1,0 +1,63 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{E794F467-F013-4C94-A6E7-02147F93EFFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrevaliOperationalReport.Common", "Library\TrevaliOperationalReport.Common\TrevaliOperationalReport.Common.csproj", "{8529A692-F045-4CBF-860F-6E006DED5CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrevaliOperationalReport.Data", "Library\TrevaliOperationalReport.Data\TrevaliOperationalReport.Data.csproj", "{CF8D2CC6-181D-4C63-BEDC-AA2BB86D862E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrevaliOperationalReport.Domain", "Library\TrevaliOperationalReport.Domain\TrevaliOperationalReport.Domain.csproj", "{E39FFA42-7BCD-4191-B251-BE3F3566F6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrevaliOperationalReport.Service", "Library\TrevaliOperationalReport.Service\TrevaliOperationalReport.Service.csproj", "{E2146A36-BAA3-4F96-8DE3-0723407EAEA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trevali.Blazor", "Trevali.Blazor\Trevali.Blazor.csproj", "{5B4E82A3-D8FE-4075-9C3B-F7F0C21CA404}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trevali.Server", "Trevali.Server\Trevali.Server.csproj", "{51994235-DAF2-42FA-9075-99A5E86F2019}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8529A692-F045-4CBF-860F-6E006DED5CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8529A692-F045-4CBF-860F-6E006DED5CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8529A692-F045-4CBF-860F-6E006DED5CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8529A692-F045-4CBF-860F-6E006DED5CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8D2CC6-181D-4C63-BEDC-AA2BB86D862E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8D2CC6-181D-4C63-BEDC-AA2BB86D862E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8D2CC6-181D-4C63-BEDC-AA2BB86D862E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8D2CC6-181D-4C63-BEDC-AA2BB86D862E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39FFA42-7BCD-4191-B251-BE3F3566F6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39FFA42-7BCD-4191-B251-BE3F3566F6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39FFA42-7BCD-4191-B251-BE3F3566F6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39FFA42-7BCD-4191-B251-BE3F3566F6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2146A36-BAA3-4F96-8DE3-0723407EAEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2146A36-BAA3-4F96-8DE3-0723407EAEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2146A36-BAA3-4F96-8DE3-0723407EAEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2146A36-BAA3-4F96-8DE3-0723407EAEA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4E82A3-D8FE-4075-9C3B-F7F0C21CA404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4E82A3-D8FE-4075-9C3B-F7F0C21CA404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4E82A3-D8FE-4075-9C3B-F7F0C21CA404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4E82A3-D8FE-4075-9C3B-F7F0C21CA404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51994235-DAF2-42FA-9075-99A5E86F2019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51994235-DAF2-42FA-9075-99A5E86F2019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51994235-DAF2-42FA-9075-99A5E86F2019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51994235-DAF2-42FA-9075-99A5E86F2019}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8529A692-F045-4CBF-860F-6E006DED5CA7} = {E794F467-F013-4C94-A6E7-02147F93EFFA}
+		{CF8D2CC6-181D-4C63-BEDC-AA2BB86D862E} = {E794F467-F013-4C94-A6E7-02147F93EFFA}
+		{E39FFA42-7BCD-4191-B251-BE3F3566F6DF} = {E794F467-F013-4C94-A6E7-02147F93EFFA}
+		{E2146A36-BAA3-4F96-8DE3-0723407EAEA6} = {E794F467-F013-4C94-A6E7-02147F93EFFA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5F9073A-498B-4945-A8B1-6B96B5F25487}
+	EndGlobalSection
+EndGlobal

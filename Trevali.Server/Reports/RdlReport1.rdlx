@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">RdlReport1.rdlx</dd:Name>
+	<Body>
+		<Height>5cm</Height>
+		<ReportItems>
+			<Textbox Name="TextBox1">
+				<Top>2.672292cm</Top>
+				<Left>3.307292cm</Left>
+				<Width>2.5cm</Width>
+				<Height>0.75cm</Height>
+				<Style>
+					<FontFamily>Arial</FontFamily>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<CanGrow>true</CanGrow>
+				<Value>Hello</Value>
+			</Textbox>
+		</ReportItems>
+	</Body>
+	<BottomMargin>2.5cm</BottomMargin>
+	<LeftMargin>2.5cm</LeftMargin>
+	<RightMargin>2.5cm</RightMargin>
+	<TopMargin>2.5cm</TopMargin>
+	<PageHeight>27.9cm</PageHeight>
+	<PageWidth>21.6cm</PageWidth>
+	<Width>16cm</Width>
+</Report>

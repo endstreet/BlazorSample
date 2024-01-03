@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Reports\DataSets\**" />
+    <Content Remove="Reports\DataSets\**" />
+    <EmbeddedResource Remove="Reports\DataSets\**" />
+    <None Remove="Reports\DataSets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="17.2.2" />
+    <PackageReference Include="GrapeCity.ActiveReports.Blazor.Viewer" Version="17.2.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="OperationalReportDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OperationalReportDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="OperationalReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationalReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\RdlReport1.rdlx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\rptDaily.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\rptWeekly.rdlx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
